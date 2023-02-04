@@ -25,10 +25,10 @@ This is dependencies used to make this project
 ```
 
 ## Output 
-
+```bash
 <img width="300" alt="Screenshot 2023-02-04 at 11 13 54 AM" src="https://user-images.githubusercontent.com/74901469/216751177-a207ab39-e5bd-42c2-88c4-0b3cf3480525.png">
-Setting Page
-
-
+```
+```bash
 <img width="300" alt="Screenshot 2023-02-04 at 11 16 51 AM" src="https://user-images.githubusercontent.com/74901469/216751212-bb63ffb4-4208-48ec-b87d-9336e715646e.png">
-Categroies Page
+```
+
