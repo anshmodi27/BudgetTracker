@@ -1,4 +1,4 @@
-import { Entypo, FontAwesome } from "@expo/vector-icons";
+import { Entypo, EvilIcons, FontAwesome } from "@expo/vector-icons";
 import React from "react";
 import {
   Button,
@@ -7,9 +7,10 @@ import {
   ScrollView,
   Text,
   TextInput,
-  TouchableOpacity,
+  Animated,
   View,
 } from "react-native";
+import { RectButton, TouchableOpacity } from "react-native-gesture-handler";
 import { ColorPicker, fromHsv } from "react-native-color-picker";
 import { Swipeable } from "react-native-gesture-handler";
 import CategoryRow from "../Components/CategoryRow";
@@ -32,6 +33,10 @@ const Categories = () => {
     { id: 2, color: theme.colors.error, name: "Hello" },
   ]);
 
+  // const deleteCategory = React.useCallback((id) => {
+  //   setCategories(categories.filter((category) => category.id !== id));
+  // }, []);
+
   const createCategory = () => {
     setCategories([
       ...categories,
@@ -48,53 +53,47 @@ const Categories = () => {
         keyboardVerticalOffset={110}
         style={{ margin: 16, flex: 1 }}
       >
-        <View
-          style={{
-            borderRadius: 15,
-            overflow: "hidden",
-          }}
-        >
-          {/* <ScrollView style={{ flex: 1 }}>
-            <View
-              style={{
-                borderRadius: 11,
-                overflow: "hidden",
-              }}
-            >
-              {categories.map(({ id, color, name }) => (
-                <Swipeable
-                  key={id.toHexString()}
-                  renderRightActions={() => {
-                    return (
-                      <View
+        <ScrollView style={{ flex: 1 }}>
+          <View
+            style={{
+              borderRadius: 11,
+              overflow: "hidden",
+            }}
+          >
+            {categories.map(({ id, color, name }) => (
+              <Swipeable
+                key={id}
+                renderRightActions={() => {
+                  return (
+                    <View
+                      style={{
+                        backgroundColor: theme.colors.error,
+                        width: 75,
+                      }}
+                    >
+                      <RectButton
                         style={{
-                          backgroundColor: theme.colors.error,
-                          width: 75,
+                          flex: 1,
+                          alignItems: "center",
+                          justifyContent: "center",
                         }}
+                        onPress={() =>
+                          setCategories(
+                            categories.filter((category) => category.id !== id)
+                          )
+                        }
                       >
-                        <RectButton
-                          style={{
-                            flex: 1,
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                          onPress={() => deleteCategory(id)}
-                        >
-                          <EvilIcons name="trash" size={40} color="white" />
-                        </RectButton>
-                      </View>
-                    );
-                  }}
-                >
-                  <CategoryRow color={color} name={name} />
-                </Swipeable>
-              ))}
-            </View>
-          </ScrollView> */}
-          {categories.map(({ id, color, name }) => (
-            <CategoryRow key={id} color={color} name={name} />
-          ))}
-        </View>
+                        <EvilIcons name="trash" size={40} color="white" />
+                      </RectButton>
+                    </View>
+                  );
+                }}
+              >
+                <CategoryRow color={color} name={name} />
+              </Swipeable>
+            ))}
+          </View>
+        </ScrollView>
         <View style={{ flex: 1 }} />
         <View
           style={{
@@ -169,7 +168,7 @@ const Categories = () => {
               alignItems: "center",
               backgroundColor: theme.colors.card,
               overflow: "hidden",
-              borderRadius: 12,
+              borderRadius: 30,
             }}
           >
             <ColorPicker

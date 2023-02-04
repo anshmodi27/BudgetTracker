@@ -13,11 +13,24 @@ export default function App() {
     <NavigationContainer theme={theme}>
       <Stack.Navigator>
         <Stack.Screen
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            headerStyle: {
+              backgroundColor: theme.colors.background,
+            },
+          }}
           name="Home"
           component={Home}
         />
-        <Stack.Screen name="Categories" component={Categories} />
+        <Stack.Screen
+          name="Categories"
+          component={Categories}
+          options={{
+            headerStyle: {
+              backgroundColor: theme.colors.background,
+            },
+          }}
+        />
       </Stack.Navigator>
 
       <StatusBar style="dark" />
