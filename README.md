@@ -23,6 +23,15 @@ This is dependencies used to make this project
     "react-native-svg": "13.4.0",
   },
 ```
+## Rafrnce 
+```bash
+expo documentaion : https://docs.expo.dev/
+react native: https://reactnative.dev/docs/environment-setup
+react navigation: https://reactnavigation.org/docs/getting-started
+for query
+stackoverflow
+medium blog
+```
 
 ## Output 
 
