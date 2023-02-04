@@ -26,9 +26,9 @@ This is dependencies used to make this project
 
 ## Output 
 
-<div style="display:flex"><img style="border-radius:30;" width="300" alt="Seting" src="https://user-images.githubusercontent.com/74901469/216751177-a207ab39-e5bd-42c2-88c4-0b3cf3480525.png">
-
-
-<img style="border-radius:30" width="300" alt="Categroies" src="https://user-images.githubusercontent.com/74901469/216751212-bb63ffb4-4208-48ec-b87d-9336e715646e.png"></div>
+<div style= "display: flex; flex-direction: row;">
+ <img style="border-radius:30;" width="300" alt="Seting" src="https://user-images.githubusercontent.com/74901469/216751177-a207ab39-e5bd-42c2-88c4-0b3cf3480525.png">
+<img style="border-radius:30" width="300" alt="Categroies" src="https://user-images.githubusercontent.com/74901469/216751212-bb63ffb4-4208-48ec-b87d-9336e715646e.png">
+</div>
 
 
