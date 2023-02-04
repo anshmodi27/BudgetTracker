@@ -25,9 +25,9 @@ This is dependencies used to make this project
 ```
 ## Reference 
 ```bash
-expo documentaion : <a href="https://docs.expo.dev/" />
-react native: https://reactnative.dev/docs/environment-setup
-react navigation: https://reactnavigation.org/docs/getting-started
+expo documentaion : "https://docs.expo.dev/"
+react native: "https://reactnative.dev/docs/environment-setup"
+react navigation: "https://reactnavigation.org/docs/getting-started"
 for query
 stackoverflow
 medium blog
