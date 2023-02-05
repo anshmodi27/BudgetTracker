@@ -16,7 +16,7 @@ const Add = () => {
     <KeyboardAvoidingView
       behavior="padding"
       keyboardVerticalOffset={110}
-      // style={{ margin: 16, flex: 1 }}
+      style={{ margin: 16, flex: 1 }}
     >
       <View
         style={{
