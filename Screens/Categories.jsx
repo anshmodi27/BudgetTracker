@@ -53,7 +53,7 @@ const Categories = () => {
         keyboardVerticalOffset={110}
         style={{ margin: 16, flex: 1 }}
       >
-        <ScrollView style={{ flex: 1 }}>
+        <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator="false">
           <View
             style={{
               borderRadius: 11,

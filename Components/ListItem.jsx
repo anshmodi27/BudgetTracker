@@ -24,6 +24,7 @@ const ListItem = ({
           backgroundColor: theme.colors.card,
         }}
         onPress={onClick}
+        disabled={!onClick}
       >
         <Text
           style={{

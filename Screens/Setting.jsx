@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Alert, Text, View } from "react-native";
 import { LinearGradient } from "react-native-svg";
 import { styles } from "../assets/Classes/Class";
 import ListItem from "../Components/ListItem";
@@ -28,18 +28,28 @@ const Setting = ({ navigation }) => {
           />
         }
       />
-      {/* <ListItem
-        label="Report a Bug"
-        detail={
-          <Entypo
-            name="chevron-thin-right"
-            color="white"
-            style={{ opacity: 0.8 }}
-            size={20}
-          />
+      <ListItem
+        label="Erase all Data"
+        isDestructive
+        onClick={() =>
+          Alert.alert("Are You Sure?", "This action is not Reversible", [
+            {
+              text: "Cancel",
+              onPress: () => {
+                console.log("cancel Pressed");
+              },
+              style: "cancel",
+            },
+            {
+              text: "Erase data",
+              style: "destructive",
+              onPress: () => {
+                console.log("ok Pressed");
+              },
+            },
+          ])
         }
-      /> */}
-      <ListItem label="Erase all Data" isDestructive />
+      />
     </View>
   );
 };
